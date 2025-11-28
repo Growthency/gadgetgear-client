@@ -2,7 +2,7 @@ import Link from "next/link";
 
 async function getProducts() {
   try {
-    // 1. সার্ভার থেকে ডেটা আনার চেষ্টা
+
     const res = await fetch(
       "https://gadgetgear-server-beta.vercel.app/products",
       {
@@ -10,15 +10,15 @@ async function getProducts() {
       }
     );
 
-    // 2. চেক করা রেসপন্স ঠিক আছে কিনা
+
     if (!res.ok) {
       return [];
     }
 
-    // 3. চেক করা রেসপন্স আসলেই JSON কিনা (HTML আসলে যেন ক্র্যাশ না করে)
+ 
     const contentType = res.headers.get("content-type");
     if (!contentType || !contentType.includes("application/json")) {
-      return []; // JSON না হলে খালি অ্যারে ফেরত দাও
+      return []; 
     }
 
     return res.json();
@@ -30,7 +30,7 @@ async function getProducts() {
 
 const FeaturedProducts = async () => {
   const products = await getProducts();
-  // যদি products null বা undefined হয়, তাহলে খালি অ্যারে ধরবে
+  
   const featured = Array.isArray(products) ? products.slice(0, 6) : [];
 
   return (

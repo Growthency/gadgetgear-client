@@ -16,7 +16,7 @@ const handler = NextAuth({
       },
       async authorize(credentials) {
         try {
-          // ১. আমাদের সার্ভার থেকে আসল ইউজার খুঁজে বের করা
+          
           const res = await fetch(
             `https://gadgetgear-server-beta.vercel.app/user/${credentials.email}`,
             {
@@ -25,13 +25,13 @@ const handler = NextAuth({
           );
           const user = await res.json();
 
-          // ২. যদি ইউজার পাওয়া যায়, তাহলে তার আসল তথ্য রিটার্ন করো
+          
           if (user) {
             return {
               id: user._id,
               name: user.name,
               email: user.email,
-              image: user.image, // <--- এই যে তোমার আসল ছবি!
+              image: user.image, 
             };
           } else {
             return null;
@@ -43,17 +43,17 @@ const handler = NextAuth({
       },
     }),
   ],
-  // ৩. সেশন এর মধ্যে ডেটা পাস করা (Callback)
+  
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
-        token.picture = user.image; // টোকেনে ছবি ঢুকালাম
+        token.picture = user.image; 
       }
       return token;
     },
     async session({ session, token }) {
       if (session.user) {
-        session.user.image = token.picture; // সেশনে ছবি সেট করলাম
+        session.user.image = token.picture; 
       }
       return session;
     },

@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
 import { useContext } from "react";
-import { AuthContext } from "@/providers/AuthProvider"; // Context ইম্পোর্ট
+import { AuthContext } from "@/providers/AuthProvider"; 
 
 const Navbar = () => {
-  const { user, logOut } = useContext(AuthContext); // useSession এর বদলে Context
+  const { user, logOut } = useContext(AuthContext); 
 
   const navOptions = (
     <>

@@ -20,7 +20,6 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         updateUserProfile(name, image).then(() => {
-          // সার্ভারেও ইউজারটা সেভ করে রাখি (অপশনাল, কিন্তু ভালো)
           const userInfo = { name, email, image };
           fetch("https://gadgetgear-server-beta.vercel.app/register", {
             method: "POST",
@@ -29,7 +28,7 @@ const Register = () => {
           });
 
           toast.success("Registration Successful!");
-          window.location.replace("/"); // হার্ড রিলোড
+          window.location.replace("/");
         });
       })
       .catch((error) => {

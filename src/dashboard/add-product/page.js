@@ -8,7 +8,6 @@ const AddProduct = () => {
   const { user, loading } = useContext(AuthContext);
   const router = useRouter();
 
-  // সিকিউরিটি চেক: ইউজার না থাকলে লগইন পেজে পাঠাও
   if (!loading && !user) {
     router.push("/login");
     return <div>Loading...</div>;
@@ -24,7 +23,7 @@ const AddProduct = () => {
       category: form.category.value,
       description: form.description.value,
       image: form.image.value || "https://placehold.co/400x300",
-      email: user.email, // যে অ্যাড করছে তার ইমেইল
+      email: user.email,
     };
 
     try {
@@ -55,7 +54,6 @@ const AddProduct = () => {
             Add New Gadget
           </h2>
           <form onSubmit={handleAddProduct} className="space-y-4">
-            {/* Title */}
             <div className="form-control">
               <label className="label">Title</label>
               <input
@@ -67,7 +65,6 @@ const AddProduct = () => {
               />
             </div>
 
-            {/* Price & Category */}
             <div className="flex gap-4">
               <div className="form-control w-1/2">
                 <label className="label">Price ($)</label>
@@ -98,7 +95,6 @@ const AddProduct = () => {
               </div>
             </div>
 
-            {/* Image URL */}
             <div className="form-control">
               <label className="label">Image URL</label>
               <input
@@ -110,7 +106,6 @@ const AddProduct = () => {
               />
             </div>
 
-            {/* Description */}
             <div className="form-control">
               <label className="label">Description</label>
               <textarea

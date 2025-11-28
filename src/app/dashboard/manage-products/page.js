@@ -9,7 +9,7 @@ const ManageProducts = () => {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
-  // ডাটা ফেচ করা
+
   useEffect(() => {
     fetch("https://gadgetgear-server-beta.vercel.app/products")
       .then((res) => res.json())
@@ -19,7 +19,7 @@ const ManageProducts = () => {
       });
   }, []);
 
-  // ডিলিট হ্যান্ডলার
+
   const handleDelete = async (id) => {
     const confirm = window.confirm("Are you sure you want to delete this?");
     if (!confirm) return;
@@ -35,7 +35,7 @@ const ManageProducts = () => {
 
       if (data.deletedCount > 0) {
         toast.success("Product Deleted Successfully!");
-        // UI থেকে রিমুভ করা
+      
         const remaining = products.filter((p) => p._id !== id);
         setProducts(remaining);
       }

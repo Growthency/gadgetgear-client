@@ -2,9 +2,9 @@
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { Typewriter, Cursor } from "react-simple-typewriter"; // ইম্পোর্ট
+import { Typewriter, Cursor } from "react-simple-typewriter"; 
 
-// Swiper CSS
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -44,7 +44,7 @@ const Hero = () => {
         centeredSlides={true}
         loop={true}
         autoplay={{
-          delay: 5000, // সময় একটু বাড়ালাম যাতে টেক্সট পড়া যায়
+          delay: 5000, 
           disableOnInteraction: false,
         }}
         pagination={{
@@ -67,13 +67,12 @@ const Hero = () => {
               <div className="hero-overlay bg-black bg-opacity-70"></div>
               <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-xl">
-                  {/* --- Typewriter Effect Start --- */}
                   <h1 className="mb-5 text-5xl font-bold text-white drop-shadow-md h-24">
                     <span className="text-primary">
-                      {/* টাইপরাইটার এখানে */}
+             
                       <Typewriter
                         words={[slide.title]}
-                        loop={1} // একবার টাইপ হয়ে থেমে যাবে
+                        loop={1} 
                         cursor
                         cursorStyle="_"
                         typeSpeed={80}
@@ -82,7 +81,7 @@ const Hero = () => {
                       />
                     </span>
                   </h1>
-                  {/* --- Typewriter Effect End --- */}
+                
 
                   <p className="mb-8 text-gray-200 drop-shadow-sm text-lg">
                     {slide.subtitle}

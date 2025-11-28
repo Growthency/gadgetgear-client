@@ -3,7 +3,7 @@ import React from "react";
 const AboutPage = () => {
   return (
     <div className="min-h-screen bg-base-100">
-      {/* Hero Section */}
+
       <div className="hero h-64 bg-base-200">
         <div className="hero-content text-center">
           <div className="max-w-md">
@@ -16,7 +16,7 @@ const AboutPage = () => {
         </div>
       </div>
 
-      {/* Content Section */}
+
       <div className="max-w-4xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div>

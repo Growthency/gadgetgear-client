@@ -9,7 +9,7 @@ const AddProduct = () => {
   const router = useRouter();
   const [submitting, setSubmitting] = useState(false);
 
-  // লোডিং বা ইউজার না থাকলে হ্যান্ডেল করা
+
   if (loading) {
     return (
       <div className="text-center mt-20">
@@ -29,7 +29,7 @@ const AddProduct = () => {
 
     const product = {
       title: form.title.value,
-      price: parseFloat(form.price.value), // সংখ্যায় রূপান্তর করা হলো
+      price: parseFloat(form.price.value), 
       category: form.category.value,
       description: form.description.value,
       image: form.image.value || "https://placehold.co/400x300",
@@ -37,7 +37,7 @@ const AddProduct = () => {
     };
 
     try {
-      // সার্ভারে পাঠানো
+  
       const res = await fetch(
         "https://gadgetgear-server-beta.vercel.app/products",
         {
