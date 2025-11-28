@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# GadgetGear - Tech & Gadget Store
 
-## Getting Started
+GadgetGear is a modern e-commerce platform for tech enthusiasts to discover, add, and manage latest gadgets.
 
-First, run the development server:
+## Live Links
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Live Site:** [https://gadgetgear-client.vercel.app]
+- **Server API:** [https://gadgetgear-server.vercel.app]
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Authentication:** Secure Login & Registration using NextAuth.js & MongoDB.
+- **Product Management:** Users can add new products (Protected Route).
+- **Manage Products:** Dashboard table to view and delete products.
+- **Dynamic UI:** Swiper slider with typewriter effect, Responsive Navbar & Footer.
+- **Search & Filter:** Find products easily by category and search terms.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tech Stack
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Frontend:** Next.js (App Router), Tailwind CSS, DaisyUI, Framer Motion.
+- **Backend:** Express.js, MongoDB.
+- **Auth:** NextAuth.js.
